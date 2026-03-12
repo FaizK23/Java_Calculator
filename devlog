@@ -1,4 +1,19 @@
 March 11 2026 - 1:35pm
-so far in my calculator project I have made a veiwable pannel that exits on close. I have also set up the pannel propeties so that the result is diplayed on the top, and the buttons will be displayed on the bottom. I haven't added any button yet, but I have the arrays for the buttons set up to be used. 
+so far in my calculator project I have made a veiwable pannel that exits on close. 
+I have also set up the pannel propeties so that the result is diplayed on the top, 
+and the buttons will be displayed on the bottom. I haven't added any button yet, 
+but I have the arrays for the buttons set up to be used. 
 
 so next is adding in the buttons and setting up the button propeties when they get clicked.
+
+March 12 2026 - 1:37pm
+
+I have now added all the button to the pannel for my calculator program.
+The buttons are all color cordinated as well. Orange for double operand operator,
+light gray for single operand operator, and dark gray for numbers.
+
+I have also set up the butoons to start working as well. So far I got the 
+numbers to display, and the clearing and negate buttons to work as well.
+
+the next thing to work on is the percentage operator and the other
+double operand operators.
