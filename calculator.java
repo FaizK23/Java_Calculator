@@ -43,7 +43,7 @@ public class calculator{
 
     // setting up the properties of the window
     calculator(){
-        frame.setVisible(true);
+        //frame.setVisible(true);
         frame.setSize(boardWidth, boardHeight);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
@@ -105,7 +105,39 @@ public class calculator{
                     String buttonValue = button.getText();
 
                     if(Arrays.asList(rightSymbols).contains(buttonValue)){
-                        
+                        // now this is where we take care of double operand operators
+                        if(buttonValue == "="){
+                            if(A!=null){
+                                B = displayLabel.getText(); // storing secong operand
+
+                                // converting A and B to doubles
+                                double numA = Double.parseDouble(A);
+                                double numB = Double.parseDouble(B);
+
+                                // conditonals for executing operators
+                                if(operator == "+"){
+                                    displayLabel.setText(removeZeroDecimal(numA+numB));
+                                }
+                                else if(operator == "-"){
+                                    displayLabel.setText(removeZeroDecimal(numA-numB));
+                                }
+                                else if(operator == "x"){
+                                    displayLabel.setText(removeZeroDecimal(numA*numB));
+                                }
+                                else if(operator == "/"){
+                                    displayLabel.setText(removeZeroDecimal(numA/numB));
+                                }
+                                clearAll();
+                            }
+                        }
+                        else if("+-x/".contains(buttonValue)){
+                            if(operator == null){
+                                A = displayLabel.getText(); // saving first operand value when user clicks operator
+                                displayLabel.setText("0");
+                                B = "0";
+                            }
+                            operator = buttonValue;
+                        }
                     }
                     else if(Arrays.asList(topSymbols).contains(buttonValue)){
                         if(buttonValue == "AC"){ // clearing
@@ -118,7 +150,9 @@ public class calculator{
                             displayLabel.setText(removeZeroDecimal(numDisplay));
                         }
                         else if(buttonValue == "%"){
-
+                             double numDisplay = Double.parseDouble(displayLabel.getText());
+                            numDisplay /= 100;
+                            displayLabel.setText(removeZeroDecimal(numDisplay));
                         }
                     }
                     else{   // digits or .
@@ -132,9 +166,17 @@ public class calculator{
                             else    // append multiple button values
                                 displayLabel.setText(displayLabel.getText() + buttonValue);
                         }
+                        // I was actually able to figure this out by myself
+                        else if("√".contains(buttonValue)){
+                                A = displayLabel.getText();
+                                double numA = Double.parseDouble(A);
+                                numA = Math.sqrt(numA);
+                                displayLabel.setText(removeZeroDecimal(numA));
+                        }
                     }
                 }
             });
+            frame.setVisible(true);
         }
 
     }

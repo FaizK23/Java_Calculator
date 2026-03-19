@@ -7,7 +7,6 @@ but I have the arrays for the buttons set up to be used.
 so next is adding in the buttons and setting up the button propeties when they get clicked.
 
 March 12 2026 - 1:37pm
-
 I have now added all the button to the pannel for my calculator program.
 The buttons are all color cordinated as well. Orange for double operand operator,
 light gray for single operand operator, and dark gray for numbers.
@@ -17,3 +16,12 @@ numbers to display, and the clearing and negate buttons to work as well.
 
 the next thing to work on is the percentage operator and the other
 double operand operators.
+
+March 18 2026 - 11:56 pm
+I have fully completed the calculator program!!!
+All of the operations work correctly and as intended, I was actually able
+to figure out the square root function on my own. 
+
+It isn't a perfect program, but this is just a simple project to get my feet wet.
+Now I need to study this code base to grasp a better understanding for future reference.
+
